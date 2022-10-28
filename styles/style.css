@@ -1,0 +1,38 @@
+/* Universal Style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Layout */
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 100px;
+    text-align: center;
+}
+header, main, footer{
+    grid-column: 1/-1;
+}
+header,footer{
+    background-color: darkgrey;
+}
+.container{
+    width: 50vw;
+    background-color: darkcyan;
+    margin: auto;
+}
+/* First approach to make image responsive */
+/* .container img{
+    width: 100%;
+} */
+/* Second approach */
+@media screen and (min-width: 900px) {
+    .container img{
+        width: 100%;
+    }
+    #skills-container{
+        width: 40vw;
+    }
+    
+}
